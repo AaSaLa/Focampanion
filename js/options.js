@@ -10,7 +10,6 @@ document.getElementById("eyes").addEventListener("click", function(){
   });
 });
 
-//TODO: Shift it elsewhere
 document.getElementById("remove_button").addEventListener("click", function(){
     var remove_site = document.getElementById('blocked_site').value;
 
