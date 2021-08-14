@@ -1,13 +1,3 @@
-// function display(){
-//     chrome.storage.sync.get(["blocked_sites"], function(result){
-//         if(result.blocked_sites.length != 0){
-//             document.getElementById("data").innerHTML = result.blocked_sites;
-//         }else{
-//             document.getElementById("data").innerText = "You haven't blocked anything :("
-//         }
-//     });
-// }
-
 function display(){
     var orderArray1 = ['mango', 'apple', 'orange'];
     chrome.storage.sync.get(['blocked_sites'], function(result) {
@@ -18,10 +8,18 @@ function display(){
         for (i = 0; i < orderArray.length; i++) {
             var row = document.createElement('tr');
             var cell = document.createElement('td');
+            var cell2 = document.createElement('td');
+            var img = new Image();
+            
+            img.src = 'images/cross.png';
+
             cell.className ='mt-4 text-light';
             cell.textContent = orderArray[i];
 
+            cell2.appendChild(img);
+
             row.appendChild(cell);
+            row.appendChild(cell2);
             tbody.appendChild(row);
         }
         table.appendChild(tbody);
