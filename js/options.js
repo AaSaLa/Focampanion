@@ -8,7 +8,7 @@ document.getElementById("eyes").addEventListener("click", function(){
       });
       console.log(result.blocked_sites);
   });
-  
+  document.getElementById('blocked_site').value = '';
 });
 
 document.getElementById("remove_button").addEventListener("click", function(){
@@ -23,4 +23,5 @@ document.getElementById("remove_button").addEventListener("click", function(){
 
         });
     });
+    document.getElementById('blocked_site').value = '';
 });
