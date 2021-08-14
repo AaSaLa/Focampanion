@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./css/options.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
+  <body class="container pt-3 bg-dark" style="width: 260px">
     <div id="buttonDiv">
     </div>
-    <div>
+    <div style="width: 250px">
       <form>
-        <input type="text" id = "blocked_site"  >
+        <input class="form-control" type="text" aria-describedby="emailHelp" id = "blocked_site" style="width: 230px;" >
       </form>
-      <button id="eyes", name="button">Add</button>
+      <button class="btn btn-danger" id="eyes", name="button">Add</button>
     </div>
   </body>
   <script src="js/options.js"></script>
