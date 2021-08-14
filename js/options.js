@@ -8,6 +8,7 @@ document.getElementById("eyes").addEventListener("click", function(){
       });
       console.log(result.blocked_sites);
   });
+  
 });
 
 document.getElementById("remove_button").addEventListener("click", function(){
