@@ -8,9 +8,48 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
   </head>
-  <body class="container pt-3 bg-dark">
-    <a href="options.html"><button class="btn btn-success" id="toNext">ADD A SITE TO BE BLOCKED</button></a>
-    <p style="padding-bottom: 3px;"></p>
+
+
+
+  <body class="container pt-3 bg-dark" style="width: 250px;">
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" id='closeNav'>&times;</a>
+      <a href="#">About</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <button class="btn-success" id='openNav'>Nav</button>
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+      <center>
+        <p class="mb-3 text-light">Exam Preparation Mode Options</p>
+      </center>
+      <hr>
+
+      <div id = 'StudyOption' class="row">
+        <a href="options.html" style="padding-bottom: 2px"><button class="btn btn-success" id="toAdd">ADD A SITE TO BE BLOCKED</button></a>
+        <a href="options.html"><button class="btn btn-danger" id="toView">VIEW AND REMOVE BLOCKED SITES</button></a>
+      </div>
+
+      <div id='ExamMode'>
+        <center>
+          <p class="mb-3 text-light" style="padding-top: 17px">EXAM MODE</p>
+        </center>
+        <hr>
+        <center>
+          <div >
+            <a href="options.html" style="padding-bottom: 2px"><button class="btn btn-warning" id="toAdd">Turn on exam mode</button></a>
+          </div>
+        </center>
+      </div>
+
+      <p style="padding-bottom: 3px;"></p>
+    </div>
+
+    <script type="text/javascript" src='js/popup.js'></script>
   </body>
 </html>
