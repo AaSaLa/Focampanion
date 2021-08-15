@@ -10,7 +10,6 @@ chrome.storage.sync.get(["blocked_sites"], function(result){
                 if(window.location.hostname.includes(blocked_site)){
                     setTimeout(function(){
                         window.open("https://cl1p.net/pls%20study", "_self");
-                        tim = 0 + ":" + time_array[1];
                     }, (parseInt(time_array[1]) * 60 * 1000) - [0] * 60 * 1000);
 
                     setInterval(() => {
