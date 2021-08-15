@@ -2,7 +2,6 @@ function display(){
     chrome.storage.sync.get(['blocked_sites'], function(result) {
         var orderArray = result.blocked_sites;
         numBlockedSite = orderArray.length;
-        console.log(orderArray);
         var table = document.getElementById('table');
         var tbody = document.createElement('tbody');
         for (i = 0; i < orderArray.length; i++) {

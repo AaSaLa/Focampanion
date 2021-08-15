@@ -14,10 +14,15 @@
     </div>
     <div style="width: 250px">
       <form>
-        <input class="form-control" type="text" id = "blocked_site" style="width: 230px;" >
+        <p class = "mb-3 text-light">Site Domain</p>
+        <input class="form-control" type="text" id = "blocked_site" style="width: 200px;" >
+        <p class = "mb-3 text-light">Max Time per site (minutes), after which it will be blocked, leave empty for site to be blocked everytime</p>
+        <input class="form-control" type="number" id = "time" style="width: 200px">
       </form>
       <button class="btn btn-danger" id="eyes" name="button">Add</button>
+      
     </div>
+
   </body>
   <script src="js/options.js"></script>
 </html>
