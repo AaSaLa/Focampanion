@@ -8,16 +8,18 @@ chrome.storage.sync.get(["blocked_sites"], function(result){
             var time_array = tim.split(":");
             if(blocked_site != ""){
                 if(window.location.hostname.includes(blocked_site)){
-                    setTimeout(function(){
-                        window.open("https://cl1p.net/pls%20study", "_self");
-                    }, (parseInt(time_array[1]) * 60 * 1000) - [0] * 60 * 1000);
+                    // setTimeout(() => {
+                    //     window.open("https://cl1p.net/pls%20study", "_self");
+                    // }, (parseInt(time_array[1]) * 1000) - time_array[0] * 1000);
 
-                    setInterval(() => {
-                        tim = (parseInt(time_array[0]) + 1) + ":" + time_array[1];
-                        console.log(tim);
-                        time.splice(i, 0, tim)
-                        chrome.storage.sync.set({"time": time}, () => {});
-                    }, 60 * 1000);
+                    // setInterval(() => {
+                    //     tim = (parseInt(time_array[0]) + 1) + ":" + time_array[1];
+                    //     console.log(tim);
+                    //     time.splice(i, 0, tim)
+                    //     console.log(time);
+                    //     chrome.storage.sync.set({"time": time}, () => {});
+                    // }, 1000);
+                    window.open("https://cl1p.net/pls%20study", "_self");
                     return;
                 }
             }
