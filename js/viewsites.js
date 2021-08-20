@@ -1,12 +1,11 @@
 function display(){ 
     chrome.storage.sync.get(['blocked_sites'], function(result) {
-        var orderArray = result.blocked_sites;
-        numBlockedSite = orderArray.length;
-        var table = document.getElementById('table');
-        var tbody = document.createElement('tbody');
-        for (i = 0; i < orderArray.length; i++) {
-            var row = document.createElement('tr');
-            var cell = document.createElement('td');
+        let orderArray = result.blocked_sites;
+        let table = document.getElementById('table');
+        let tbody = document.createElement('tbody');
+        for (let i = 0; i < orderArray.length; i++) {
+            let row = document.createElement('tr');
+            let cell = document.createElement('td');
             cell.className ='mt-4 text-light';
             cell.textContent = orderArray[i];
 

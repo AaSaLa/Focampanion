@@ -18,8 +18,8 @@ document.getElementById("turnOffExamMode").addEventListener("click", function(){
       let  orderArray = result.blocked_sites;
       newSites = ['google.com', 'bing.com', 'youtube.com', 'ncert.nic.in', 'byjus.com', 'vedantu.com', 'quora.com', 'brainly.in', 'toppr.com', 'discord.com']
       for (let a = 0; a<=newSites.length; a++){
-      	var remove_site = newSites[a];
-      	var remove_site_index = orderArray.indexOf(remove_site);
+      	let remove_site = newSites[a];
+      	let remove_site_index = orderArray.indexOf(remove_site);
       	orderArray.splice(remove_site_index, 1);
       }
 
