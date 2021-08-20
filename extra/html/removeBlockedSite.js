@@ -1,3 +1,7 @@
-document.getElementById('yes_button').addEventListener('click', function(){
-    window.location.href = 'confirmationPage.html'
+document.getElementById('submit').addEventListener('click', function(){
+    chrome.storage.sync.get(["password"], function (result) {
+        if(document.getElementById('password').value === result.password){
+            window.location.href = 'confirmationPage.html'
+        }
+    })
 })

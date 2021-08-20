@@ -1,7 +1,7 @@
 document.getElementById("eyes").addEventListener("click", function(){
-  var blocked_site = document.getElementById('blocked_site').value;
-  var time = document.getElementById('time').value;
-  if(time == ""){
+  let blocked_site = document.getElementById('blocked_site').value;
+  let time = document.getElementById('time').value;
+  if(time === ""){
     time = 0;
   }
 

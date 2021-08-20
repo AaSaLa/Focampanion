@@ -16,7 +16,7 @@
 
   "permissions": ["storage", "activeTab", "scripting", "tabs", "management"],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "password_screen.html",
     "default_icon": {
       "128": "/images/extension_Logo128.png"
     }
