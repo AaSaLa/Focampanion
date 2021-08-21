@@ -7,11 +7,11 @@ function display(){
             let row = document.createElement('tr');
             let cell = document.createElement('td');
             cell.className ='mt-4 text-light';
-            if(parseInt(tbodyElement[1], 10) > 180){
-                cell.textContent = tbodyElement[0] + ":  " + parseInt(tbodyElement[1], 10) / 60 + " hours"
+            if(parseInt(tbodyElement[1], 10) > 60){
+                cell.textContent = tbodyElement[0] + "-  " + (parseInt(tbodyElement[1], 10) / 60).toFixed(2) + " hours"
             }
             else {
-                cell.textContent = tbodyElement[0] + ":  " + tbodyElement[1] + " minutes";
+                cell.textContent = tbodyElement[0] + "-  " + tbodyElement[1] + " minutes";
             }
 
             row.appendChild(cell);
