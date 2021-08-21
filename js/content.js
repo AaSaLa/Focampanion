@@ -15,12 +15,14 @@ window.onblur = function() {
 
 chrome.storage.sync.get(["sites"], function(result){
     let sites = new Map(Object.entries(result.sites));
-    if(!sites.has(window.location.hostname)){
-        sites.set(window.location.hostname, 0);
+    let hostname = window.location.hostname.replace('www.', '');
+    hostname = hostname.replace('.com', '');
+    if(!sites.has(hostname)){
+        sites.set(hostname, 0);
     }
     setInterval(()=> {
         if(focused){
-            sites.set(window.location.hostname, parseInt(sites.get(window.location.hostname), 10) + 1);
+            sites.set(hostname, parseInt(sites.get(hostname), 10) + 1);
             chrome.storage.sync.set({"sites": Object.fromEntries(sites)});
         }
     }, 60 * 1000);
@@ -39,10 +41,10 @@ chrome.storage.sync.get(["blocked_sites"], function(result){
                     setTimeout(function(){
                         window.open("https://cl1p.net/pls%20study", "_self");
                         tim = tim.split(":")[1] + ":" + tim.split(":")[1];
-                    }, (parseInt(tim.split(":")[1]) * 60 * 1000) - tim.split(":")[0] * 60 * 1000);
+                    }, (parseInt(tim.split(":")[1], 10) * 60 * 1000) - tim.split(":")[0] * 60 * 1000);
 
                     setInterval(() => {
-                        tim = (parseInt(tim.split(":")[0]) + 1) + ":" + tim.split(":")[1];
+                        tim = (parseInt(tim.split(":")[0], 10) + 1) + ":" + tim.split(":")[1];
                         time.splice(i, 0, tim)
                         chrome.storage.sync.set({"time": time}, function(){
                         });
