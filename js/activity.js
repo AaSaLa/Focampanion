@@ -13,7 +13,15 @@ function display(){
             else {
                 cell.textContent = tbodyElement[0] + "-  " + tbodyElement[1] + " minutes";
             }
-
+            row.appendChild(cell);
+            tbody.appendChild(row);
+        }
+        if(tbody.rows.length < 1){
+            let row = document.createElement('tr');
+            let cell = document.createElement('td');
+            cell.className = 'mt-4 text-light';
+            cell.textContent = "Time Tracker will update as you spend more than 1 minute on a website";
+            cell.style = "font-size: small";
             row.appendChild(cell);
             tbody.appendChild(row);
         }
