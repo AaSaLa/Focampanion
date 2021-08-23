@@ -10,7 +10,7 @@ An App which helps you concenterate and focus more on study by removing all the 
     - Add a rest time period, in which sites will not be blocked
 
 ### > Installing the extension
-#### 1. Install the zip file from the main branch 
+#### 1. Install the zip file from the main branch (or clone the repo)
  ![img1](https://user-images.githubusercontent.com/63640902/130461066-d6d04eec-e758-4350-9c98-2e89f9aea9db.PNG)
 #### 2. Extract the zip locally,
 #### 3. Go to chrome://extensions
