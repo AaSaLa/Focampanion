@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+            crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+</head>
+<body  class="container pt-3 bg-dark" style="width: 250px;">
+    <form>
+        <label for="motivational_text" class = "mb-3 text-light" style="font-size: 15px"><span
+                style="text-decoration: line-through;">Motivational</span> Text to be displayed when you try to access a blocked site</label>
+        <input type="text" id = "motivational_text">
+        <p>  </p>
+        <label for="motivational_image" class = "mb-3 text-light" style="font-size: 15px"><span
+                style="text-decoration: line-through;">Motivational</span> Image to be displayed when you try to access a blocked site (Link)</label>
+        <input type="text" id = "motivational_image">
+
+        <p class="mb-3 text-light" style="font-size: 15px">Rest Time Period(Sites will not be blocked)</p>
+        <label for="start_time" class="mb-3 text-light" style="font-size: 15px">Start Time</label>
+        <input type="time" id = "start_time">
+        <label for="end_time" class="mb-3 text-light" style="font-size: 15px">End Time</label>
+        <input type="time" id = "end_time">
+    </form>
+    <button type="submit" id = "set" class="btn btn-danger">Update Changes</button>
+    <script type="text/javascript" src = "options.js"></script>
+</body>
+</html>

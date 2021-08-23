@@ -1,0 +1,28 @@
+{
+  "name": "Focompanion",
+  "description": "An App which helps you concenterate and focus more on study by removing al the distractions forcefully, which helps you be more productive",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches":  ["http://*/*", "https://*/*"],
+      "js": ["js/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "permissions": ["storage", "activeTab", "scripting", "tabs", "management"],
+  "action": {
+    "default_popup": "password_screen.html",
+    "default_icon": {
+      "128": "/images/extension_Logo128.png"
+    }
+  },
+  "icons": {
+    "128": "/images/extension_Logo128.png"
+  },
+  "options_page": "options.html"
+}
